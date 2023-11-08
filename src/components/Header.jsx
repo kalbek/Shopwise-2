@@ -8,13 +8,13 @@ import { FaSearch } from "react-icons/fa";
 
 export default function Header() {
   return (
-    <div className="flex w-full md:px-[160px] justify-between py-[20px] px-[16px] items-center gap-[10%] h-auto">
-      <div className="flex gap-8 flex-inline items-center">
+    <div className="flex md:px-[160px] justify-between py-[20px]">
+      <div className="flex w-full gap-8 flex-inline items-center justify-between">
         {/* logo */}
         <Image src={logo} />
-        {/* Search bar */}
 
-        <div className="hidden md:flex gap-2 w-[31vw] h-[56px] rounded-[8px] flex-inline bg-darkgray justify-start items-center px-6">
+        {/* Search bar */}
+        <div className="hidden focus:outline group md:flex gap-2 w-[31vw] h-[56px] rounded-[8px] flex-inline bg-darkgray justify-start items-center px-6 group">
           <div className="opacity-40">
             <FaSearch />
           </div>
@@ -23,7 +23,7 @@ export default function Header() {
             name=""
             id=""
             placeholder="Search"
-            className="bg-darkgray overflow-hidden pl-2 h-full w-full"
+            className="bg-darkgray overflow-hidden pl-2 h-full w-full group focus:outline-none  "
           />
         </div>
         {/* desktop menus */}
@@ -36,7 +36,7 @@ export default function Header() {
           <li className="cursor-pointer font-semibold text-secondary">Blog</li>
         </ul>
         {/* Icon groups */}
-        <ul className="gap-8 mt-1 scale-115 hidden md:flex">
+        <ul className="gap-8 mt-1 hidden md:flex">
           <li>
             <a href="">
               <Image src={favorites} />
