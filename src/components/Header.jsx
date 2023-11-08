@@ -9,12 +9,12 @@ import { FaSearch } from "react-icons/fa";
 export default function Header() {
   return (
     <div className="flex md:px-[160px] justify-between py-[20px]">
-      <div className="flex w-full gap-8 flex-inline items-center justify-between">
+      <div className="flex w-full flex-inline items-center justify-between">
         {/* logo */}
         <Image src={logo} />
 
         {/* Search bar */}
-        <div className="hidden focus:outline group md:flex gap-2 w-[31vw] h-[56px] rounded-[8px] flex-inline bg-darkgray justify-start items-center px-6 group">
+        <div className="hidden focus:outline group md:flex gap-2 lg:w-[40%] md:w-[200%] h-[56px] rounded-[8px] flex-inline bg-darkgray justify-start items-center px-6 group">
           <div className="opacity-40">
             <FaSearch />
           </div>
@@ -27,30 +27,32 @@ export default function Header() {
           />
         </div>
         {/* desktop menus */}
-        <ul className="hidden md:flex gap-12">
+        <ul className="hidden md:flex lg:gap-8 md:gap-2 text-sm md:mt-2 items-center">
           <li className="cursor-pointer font-semibold">Home</li>
           <li className="cursor-pointer font-semibold text-secondary">About</li>
           <li className="cursor-pointer font-semibold text-secondary">
             Contact&nbsp;Us
           </li>
           <li className="cursor-pointer font-semibold text-secondary">Blog</li>
-        </ul>
-        {/* Icon groups */}
-        <ul className="gap-8 mt-1 hidden md:flex">
-          <li>
-            <a href="">
-              <Image src={favorites} />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <Image src={cart} />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <Image src={user} />
-            </a>
+          {/* Icon groups */}
+          <li className="">
+            <ul className="lg:gap-8 md:gap-2 lg:mt-1 md:mt-2 hidden md:flex">
+              <li className="w-[30px] h-[30px]">
+                <a href="">
+                  <Image src={favorites} />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <Image src={cart} />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <Image src={user} />
+                </a>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
