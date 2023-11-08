@@ -2,4 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
- 
+input[type="search"]::before {
+  content: url('../../public/logo.svg');
+}
