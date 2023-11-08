@@ -17,6 +17,7 @@ module.exports = {
         linear: "#211c24",
         darkgray: "#f5f5f5",
         darksecondary: "#2e2e2e",
+        lightsecondary: "#969696",
       },
     },
   },
