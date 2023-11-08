@@ -3,10 +3,14 @@ import Image from "next/image";
 import iphoneImage from "../../public/iphoneImage.png";
 import iphoneImageLarge from "../../public/iphoneImageLarge.png";
 import ButtonTransparent from "./ButtonTransparent";
+import SubNav from "./SubNav";
 
 export default function Banner() {
   return (
     <div className="h-auto bg-linear md:h-screen">
+      {/* sub header */}
+      <SubNav />
+      {/* banner */}
       <div className="content flex flex-col items-center md:flex-row   md:justify-between md:px-[160px] md:w-full  md:gap-4 pt-[45px]">
         <div className="flex flex-col items-center md:items-start mt-8   ">
           <p className="text-secondary text-[28px] font-medium ">Pro.Beyond.</p>
