@@ -21,6 +21,7 @@ module.exports = {
         lightsecondary: "#969696",
         lightgray: "#ededed",
         philippinegray: "#909090",
+        lotion: "#fafafa",
       },
     },
   },
