@@ -22,6 +22,7 @@ module.exports = {
         lightgray: "#ededed",
         philippinegray: "#909090",
         lotion: "#fafafa",
+        cultured: "#f6f6f6",
       },
     },
   },

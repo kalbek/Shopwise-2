@@ -28,7 +28,10 @@ export default function Categories() {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4  itmes-center p-4">
         {category.map((item, index) => (
-          <div className="flex flex-col gap-4 flex-grow   items-center font-semibold bg-lightgray rounded-[8px] py-6">
+          <div
+            key={index}
+            className="flex flex-col gap-4 flex-grow   items-center font-semibold bg-lightgray rounded-[8px] py-6"
+          >
             <Image src={item.image} />
             <h2>{item.label}</h2>
           </div>

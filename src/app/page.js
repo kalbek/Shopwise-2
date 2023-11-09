@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Banner from "@/components/Banner";
 import Banners from "@/components/Banners";
 import Categories from "@/components/Categories";
+import Products from "@/components/Products";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <Banner />
         <Banners />
         <Categories />
+        <Products />
       </div>
     </main>
   );
