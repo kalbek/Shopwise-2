@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Header from "@/components/Header";
 import Banner from "@/components/Banner";
-import ButtonTransparent from "@/components/ButtonTransparent";
+import Banners from "@/components/Banners";
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
       <div className="flex flex-col w-full">
         <Header />
         <Banner />
+        <Banners />
       </div>
     </main>
   );

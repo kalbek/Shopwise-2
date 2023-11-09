@@ -26,7 +26,7 @@ export default function Banner() {
             Created to change everything for the better. For everyone
           </p>
           <span className="py-[32px]">
-            <ButtonTransparent title="Shop Now" textColor="white" />
+            <ButtonTransparent title="Shop Now" textColor="white" outlineColor="white" width="184px" />
           </span>
         </div>
         <div className="md:hidden mt-[2px]">
