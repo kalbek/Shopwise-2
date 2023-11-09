@@ -1,14 +1,13 @@
 import Image from "next/image";
-import iphone14pro from "../../public/productIphone14pro.svg";
-import camera from "../../public/productcamera.svg";
-import applewatch from "../../public/productsmartwatch.svg";
-import airpodsmax from "../../public/productairpodsmax.svg";
-import samsungwatch from "../../public/productsamsungwatch.svg";
-import galaxyzfold from "../../public/productgalxyzfold.svg";
-import galaxybuds from "../../public/productgalaxybuds.svg";
-import appleipad from "../../public/productappleipad9.svg";
+import iphone14pro from "../../public/productIphone14pro.png";
+import camera from "../../public/productcamera.png";
+import applewatch from "../../public/productsmartwatch.png";
+import airpodsmax from "../../public/productairpodsmax.png";
+import samsungwatch from "../../public/productsamsungwatch.png";
+import galaxyzfold from "../../public/productgalxyzfold.png";
+import galaxybuds from "../../public/productgalaxybuds.png";
+import appleipad from "../../public/productappleipad9.png";
 import favorites from "../../public/heart.svg";
-import ButtonTransparent from "./ButtonTransparent";
 import BlackButton from "./BlackButton";
 
 export default function Products() {
@@ -56,7 +55,7 @@ export default function Products() {
                 <span></span>
                 <Image className="cursor-pointer" src={favorites} />
               </div>
-              <Image src={item.image} className=""/>
+              <Image src={item.image} className="" />
               <h3 className="font-semibold text-md text-center h-[20%]">
                 {item.description}
               </h3>
