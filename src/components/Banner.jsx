@@ -11,8 +11,8 @@ export default function Banner() {
       {/* sub header */}
       <SubNav />
       {/* banner */}
-      <div className="content flex flex-col items-center lg:grid md:grid-cols-2  md:justify-between md:px-[160px] md:w-full md:gap-4 pt-[45px]">
-        <div className="flex flex-col items-center md:items-start mt-8 w-auto outline outline-white">
+      <div className="content flex flex-col items-center lg:grid md:grid-cols-2  md:justify-between md:px-[8%] md:w-full md:gap-4 pt-[45px]">
+        <div className="flex flex-col items-center md:items-start mt-8 md:mt-0 w-auto ">
           <p className="text-secondary text-[28px] md:text-3xl font-medium ">Pro.Beyond.</p>
           <div className="flex flex-col items-center md:flex-row md:flex-wrap md:gap-4  ">
             <h1 className="text-white text-[70px] md:text-9xl md:ml-[-8px] font-extralight tracking-tight">
@@ -32,7 +32,7 @@ export default function Banner() {
         <div className="md:hidden mt-[2px]">
           <Image src={iphoneImage} />
         </div>
-        <div className="hidden md:flex outline outline-white  justify-end">
+        <div className="hidden md:flex   justify-end">
           <Image src={iphoneImageLarge} />
         </div>
       </div>
