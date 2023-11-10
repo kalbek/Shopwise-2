@@ -32,7 +32,7 @@ export default function Categories() {
         {category.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col gap-4 items-center h-auto rounded-lg font-semibold bg-lightgray py-6 aspect-[1/1] justify-center"
+            className="flex flex-col gap-4 items-center h-auto rounded-2xl font-semibold bg-lightgray py-6 aspect-[1/1] justify-center"
           >
             <Image src={item.image} />
             <h2 className="md:font-semibold text-lg text-center leading-5">
