@@ -18,22 +18,26 @@ export default function Categories() {
     { image: gaming, label: "Gaming" },
   ];
   return (
-    <div className="flex flex-col bg-lotion py-6  ">
-      <div className="flex gap-4 justify-between px-8 items-center py-8">
-        <h1 className="text-[24px] font-medium">Browse By Category</h1>
+    <div className="flex flex-col bg-lotion py-6 md:px-32 px-4 justify-center">
+      <div className="flex gap-4 justify-between px-1 md:pl-4 items-center py-8">
+        <h1 className="text-xl font-medium md:text-2xl md:ml-[-1rem]">
+          Browse By Category
+        </h1>
         <span className="flex gap-6">
           <Image src={lt} />
           <Image src={gt} />
         </span>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4  itmes-center p-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 items-center">
         {category.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col gap-4 flex-grow   items-center font-semibold bg-lightgray rounded-[8px] py-6"
+            className="flex flex-col gap-4 items-center h-auto rounded-lg font-semibold bg-lightgray py-6 aspect-[1/1] justify-center"
           >
             <Image src={item.image} />
-            <h2>{item.label}</h2>
+            <h2 className="md:font-semibold text-lg text-center leading-5">
+              {item.label}
+            </h2>
           </div>
         ))}
       </div>
