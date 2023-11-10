@@ -8,7 +8,7 @@ import { FaSearch } from "react-icons/fa";
 
 export default function Header() {
   return (
-    <div className="flex md:px-[160px] justify-between py-[20px]">
+    <div className="flex px-4 md:px-[8%] justify-between py-[20px]">
       <div className="flex w-full flex-inline items-center justify-between">
         {/* logo */}
         <Image src={logo} />
@@ -35,8 +35,8 @@ export default function Header() {
           </li>
           <li className="cursor-pointer font-semibold text-secondary">Blog</li>
           {/* Icon groups */}
-          <li className="">
-            <ul className="lg:gap-8 md:gap-2 lg:mt-1 md:mt-2 hidden md:flex">
+          <li className="hidden md:block">
+            <ul className="lg:gap-8 md:gap-2 lg:mt-1 md:mt-2 flex ">
               <li className="w-[30px] h-[30px]">
                 <a href="">
                   <Image src={favorites} />
