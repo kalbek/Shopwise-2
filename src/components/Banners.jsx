@@ -88,16 +88,16 @@ export default function Banners() {
           </div>
           {/* featured section text content */}
           <div
-            className="flex flex-col justify-center items-center    "
+            className="flex flex-col justify-center items-center md:items-start md:pl-14 "
           >
-            <h3 className=" text-[30px] text-linear flex flex-nowrap md:text-[80px]">
-              <span className="font-bold md:font-light"> {card.title} </span>&nbsp;
+            <h3 className=" text-[30px] text-linear flex flex-nowrap md:text-[80px] ">
+              <span className="font-bold md:font-extralight"> {card.title} </span>&nbsp;
               <span className="md:font-bold"> {card.span}</span>
             </h3>
-            <p className="text-sm text-philippinegray px-8 text-center md:text-start">
+            <p className="text-sm text-philippinegray px-8 md:px-2 text-center md:text-start md:text-lg md:font-medium">
               {card.subTitle}
             </p>
-            <div className="font-medium my-4 md:w-[284px] w-full px-8 md:self-start">
+            <div className="font-medium my-4 md:w-[284px] w-full px-8 md:px-2 md:self-start md:font-medium md:mt-[40px]">
               <ButtonTransparent
                 title="Shop Now"
                 textColor="linear"
