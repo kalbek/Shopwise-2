@@ -78,9 +78,9 @@ export default function Banners() {
           className={`${card.bgcolor}  bg-lightgray py-[40px] w-full h-auto flex flex-col md:flex-row-reverse gap-4 justify-center items-center`}
         >
           {/* featured section image */}
-          <div className="flex flex-col  justify-center items-center mt-4 h-full outline">
-            <div className="hidden md:block object-fill outline ">
-              <Image src={card.image} alt="banner image" />
+          <div className="flex flex-col  justify-center items-center mt-4 h-full  ">
+            <div className="hidden md:block object-fill   ">
+              <Image src={card.image} alt="banner image" className=" aspect-[9/16]"/>
             </div>
             <div className="block md:hidden">
               <Image src={card.miniImage} alt="mini banner image" />
@@ -88,19 +88,16 @@ export default function Banners() {
           </div>
           {/* featured section text content */}
           <div
-            className="flex flex-col justify-center items-center md:items-start outline"
+            className="flex flex-col justify-center items-center    "
           >
-            <span>a</span>
-            <span>b</span>
-            <span>c</span>
             <h3 className=" text-[30px] text-linear flex flex-nowrap md:text-[80px]">
               <span className="font-bold md:font-light"> {card.title} </span>&nbsp;
               <span className="md:font-bold"> {card.span}</span>
             </h3>
-            <p className="text-sm text-philippinegray px-8 text-center">
+            <p className="text-sm text-philippinegray px-8 text-center md:text-start">
               {card.subTitle}
             </p>
-            <div className="font-medium my-4 md:w-[284px] w-full px-8">
+            <div className="font-medium my-4 md:w-[284px] w-full px-8 md:self-start">
               <ButtonTransparent
                 title="Shop Now"
                 textColor="linear"

@@ -24,6 +24,9 @@ module.exports = {
         lotion: "#fafafa",
         cultured: "#f6f6f6",
       },
+      aspectRatio: {
+        "9/16": "9/16",
+      },
     },
   },
   plugins: [],
