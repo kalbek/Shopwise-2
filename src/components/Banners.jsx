@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import airPodMax from "../../public/airpodsmax.png";
 import appleVisionPro from "../../public/applevisionpro.png";
@@ -6,7 +7,9 @@ import macBookAir from "../../public/macbookair.png";
 import macBookAirMini from "../../public/macbookairmini.png";
 import bottombody from "../../public/bottombody.png";
 import ButtonTransparent from "./ButtonTransparent";
+import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function Banners() {
   const bannerCards = [
@@ -46,10 +49,34 @@ export default function Banners() {
       bgcolor: "lightgray",
     },
   ];
+  const [isMediumScreen, setIsMediumScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenWidth = () => {
+      setIsMediumScreen(window.innerWidth >= 768);
+    };
+
+    // Initial check on mount
+    checkScreenWidth();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", checkScreenWidth);
+
+    // Remove event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", checkScreenWidth);
+    };
+  }, []);
+  const orderedBannerCards = [bannerCards[2], bannerCards[0], bannerCards[1]];
+  const cardsToRender = isMediumScreen ? orderedBannerCards : bannerCards;
+
+  // const selectedBannerCards =
+  // window.innerWidth >= 768 ? orderedBannerCards : bannerCards;
+  
   return (
     <div className="flex flex-col md:flex-row md:h-[87vh]">
       <div className="md:grid md:grid-cols-2 md:w-[100%] justify-center relative">
-        {bannerCards.map((card, index) => (
+        {cardsToRender.map((card, index) => (
           <div
             key={index}
             className={`${card.bgcolor}  ${
@@ -71,11 +98,9 @@ export default function Banners() {
               className={`md:absolute md:right-0 md:w-[64%] md:pr-10 z-50 bg-opacity-100 bg-inherit flex flex-col items-center justify-center md:items-start md:justify-start`}
             >
               <h3
-                className={`${
-                  index % 2 !== 0 ? "text-white" : ""
-                } text-[35px] ${
+                className={` ${card.title === "Apple Vision" && "text-white"} text-[35px] ${
                   card.title === "Playstation" && "md:text-[370%] font-semibold"
-                } `}
+                }`}
               >
                 {card.title}{" "}
                 <br
