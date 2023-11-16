@@ -52,20 +52,38 @@ export default function Banners() {
         {bannerCards.map((card, index) => (
           <div
             key={index}
-            className={`${card.bgcolor} py-[40px] w-full h-auto flex flex-col gap-2 justify-center items-center md:flex-row`}
+            className={`${card.bgcolor} py-[40px] w-full relative h-auto flex flex-col gap-2 justify-center items-center md:flex-row`}
           >
-            <div>
-              <Image src={card.image} alt="banner image" />
+            <div
+              className={`h-full md:absolute  aspect-auto  ${
+                card.image !== playstation5 ? "-left-44" : "-left-20"
+              } `}
+            >
+              <Image
+                src={card.image}
+                alt="banner image"
+                className="md:w-80 md:h-full md:object-contain overflow-hidden"
+              />
             </div>
-            <div className=" flex flex-col items-center justify-center">
+            <div
+              className={`md:absolute ${card.title === "Playstation" ? "md:-right-[100%] md:w-[120%]" : " md:right-0 md:w-[64%] md:pr-10 " } z-50 bg-opacity-100 bg-inherit flex flex-col items-center justify-center md:items-start md:justify-start`}
+            >
               <h3
                 className={`${
                   index % 2 !== 0 ? "text-white" : ""
-                } text-[35px] md:flex md:items-end`}
+                } text-[35px] ${card.title === "Playstation" && "text-[370%] font-semibold"} `}
               >
-                {card.title} <b>{card.span}</b>
+                {card.title}{" "}
+                <br
+                  className={`hidden ${
+                    card.image !== playstation5 &&
+                    card.title !== "Apple AirPods" &&
+                    "md:flex"
+                  }`}
+                />{" "}
+                <b>{card.span}</b>
               </h3>
-              <p className="text-[16px] text-philippinegray text-center font-medium w-[97%]">
+              <p className={`${card.title === "Playstation" && "md:w-[75%]"} text-[16px] text-philippinegray text-center md:text-start font-medium w-[97%]`}>
                 {card.subTitle}
               </p>
             </div>
@@ -80,18 +98,24 @@ export default function Banners() {
           {/* featured section image */}
           <div className="flex flex-col  justify-center items-center mt-4 h-full  ">
             <div className="hidden md:block object-fill   ">
-              <Image src={card.image} alt="banner image" className=" aspect-[9/16]"/>
+              <Image
+                src={card.image}
+                alt="banner image"
+                className=" aspect-[9/16]"
+              />
             </div>
             <div className="block md:hidden">
               <Image src={card.miniImage} alt="mini banner image" />
             </div>
           </div>
           {/* featured section text content */}
-          <div
-            className="flex flex-col justify-center items-center md:items-start md:pl-14 "
-          >
+          <div className="flex flex-col justify-center items-center md:items-start md:pl-14 ">
             <h3 className=" text-[30px] text-linear flex flex-nowrap md:text-[80px] ">
-              <span className="font-bold md:font-extralight"> {card.title} </span>&nbsp;
+              <span className="font-bold md:font-extralight">
+                {" "}
+                {card.title}{" "}
+              </span>
+              &nbsp;
               <span className="md:font-bold"> {card.span}</span>
             </h3>
             <p className="text-sm text-philippinegray px-8 md:px-2 text-center md:text-start md:text-lg md:font-medium">
