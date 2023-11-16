@@ -53,7 +53,7 @@ export default function Banners() {
           <div
             key={index}
             className={`${card.bgcolor}  ${
-              card.title === "Playstation" ? "col-span-2" : " "
+              card.title === "Playstation" ? "md:col-span-2" : " "
             } py-[40px] w-full relative h-auto flex flex-col gap-2 justify-center items-center md:flex-row`}
           >
             <div
@@ -74,7 +74,7 @@ export default function Banners() {
                 className={`${
                   index % 2 !== 0 ? "text-white" : ""
                 } text-[35px] ${
-                  card.title === "Playstation" && "text-[370%] font-semibold"
+                  card.title === "Playstation" && "md:text-[370%] font-semibold"
                 } `}
               >
                 {card.title}{" "}
