@@ -47,7 +47,7 @@ export default function Banners() {
     },
   ];
   return (
-    <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col md:flex-row md:h-[87vh]">
       <div className="md:grid md:grid-cols-2 md:w-[100%]  justify-center">
         {bannerCards.map((card, index) => (
           <div
