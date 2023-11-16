@@ -48,11 +48,13 @@ export default function Banners() {
   ];
   return (
     <div className="flex flex-col md:flex-row md:h-[87vh]">
-      <div className="md:grid md:grid-cols-2 md:w-[100%]  justify-center">
+      <div className="md:grid md:grid-cols-2 md:w-[100%] justify-center relative">
         {bannerCards.map((card, index) => (
           <div
             key={index}
-            className={`${card.bgcolor} py-[40px] w-full relative h-auto flex flex-col gap-2 justify-center items-center md:flex-row`}
+            className={`${card.bgcolor}  ${
+              card.title === "Playstation" ? "col-span-2" : " "
+            } py-[40px] w-full relative h-auto flex flex-col gap-2 justify-center items-center md:flex-row`}
           >
             <div
               className={`h-full md:absolute  aspect-auto  ${
@@ -66,12 +68,14 @@ export default function Banners() {
               />
             </div>
             <div
-              className={`md:absolute ${card.title === "Playstation" ? "md:-right-[100%] md:w-[120%]" : " md:right-0 md:w-[64%] md:pr-10 " } z-50 bg-opacity-100 bg-inherit flex flex-col items-center justify-center md:items-start md:justify-start`}
+              className={`md:absolute md:right-0 md:w-[64%] md:pr-10 z-50 bg-opacity-100 bg-inherit flex flex-col items-center justify-center md:items-start md:justify-start`}
             >
               <h3
                 className={`${
                   index % 2 !== 0 ? "text-white" : ""
-                } text-[35px] ${card.title === "Playstation" && "text-[370%] font-semibold"} `}
+                } text-[35px] ${
+                  card.title === "Playstation" && "text-[370%] font-semibold"
+                } `}
               >
                 {card.title}{" "}
                 <br
@@ -83,7 +87,11 @@ export default function Banners() {
                 />{" "}
                 <b>{card.span}</b>
               </h3>
-              <p className={`${card.title === "Playstation" && "md:w-[75%]"} text-[16px] text-philippinegray text-center md:text-start font-medium w-[97%]`}>
+              <p
+                className={`${
+                  card.title === "Playstation" && "md:w-[75%]"
+                } text-[16px] text-philippinegray text-center md:text-start font-medium w-[97%] md:text-lg`}
+              >
                 {card.subTitle}
               </p>
             </div>
@@ -96,7 +104,7 @@ export default function Banners() {
           className={`${card.bgcolor}  bg-lightgray py-[40px] w-full h-auto flex flex-col md:flex-row-reverse gap-4 justify-center items-center`}
         >
           {/* featured section image */}
-          <div className="flex flex-col  justify-center items-center mt-4 h-full  ">
+          <div className="flex flex-col  justify-center items-center mt-4 h-full">
             <div className="hidden md:block object-fill   ">
               <Image
                 src={card.image}
